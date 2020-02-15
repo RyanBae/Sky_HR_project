@@ -2,27 +2,50 @@
 <% include ../base/header.ejs %>
 
 <style>
+table{
+    border: solid 1px #191919;
+    margin-bottom: 4% ;
+    margin-top: 4% ;
+}
+
 th{
     width: 50px;
     padding-left: 5px;
     padding-right: 5px;
     white-space: nowrap;
+    border: solid 1px #888888;
+    text-align: center !important;
+    align-items: center !important;
 }
+
+.schedule-container{
+    margin: 5% 2% 5% 2%;
+}
+input{
+    width: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* 
+
+휴무 색 red
+연차 색 #67ff36
+ */
 </style>
 
 
 <div>
-    <h1>근태표
-    </h1>
+    <h1>근태표</h1>
 </div>
 
 <div>
-    <div style="overflow: scroll;">
+    <div class="schedule-container" style="overflow: scroll;">
+        <h2>2월</h2>
+        <h2>인천공항 신라면세</h2>
         <table>
             <thead>
                 <tr>
                     <th>이름</th>
-                    <th>직급</th>
                     <th>1</th>
                     <th>2</th>
                     <th>3</th>
@@ -58,113 +81,234 @@ th{
             </thead>
             <tbody>
                 <tr>
-                    <th>홍길동</th>
-                    <th>매니저</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>휴무</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>휴무</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>휴무</th>
-                    <th>휴무</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
+                    <tr> 
+                        <th>홍길동</th>
+                        <th>
+                            <input type="text" name="">
+                        </th>
+                        <th><input type="text" name=""></th>
+                        <th><input type="text" name=""></th>
+                        <th><input type="text" name=""></th>
+                        <th style="background-color: red;">휴</th>
+                        <th style="background-color: #67ff36;">연</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>휴무</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>휴무</th>
+                        <th>휴무</th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>휴무</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>휴무</th>
+                        <th>휴무</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                    </tr>
+                    <tr>
+                        <th>연장근무</th>
+                        <th> <input type="text" name=""></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    
                 </tr>
                 <tr>
-                    <th>이순신</th>
-                    <th>시니어</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>휴무</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>휴무</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>휴무</th>
-                    <th>휴무</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
+                    <tr> 
+                        <th>홍길동</th>
+                        <th>
+                            <input type="text" name="">
+                        </th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>휴무</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>휴무</th>
+                        <th>휴무</th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>휴무</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>휴무</th>
+                        <th>휴무</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                    </tr>
+                    <tr>
+                        <th>연장근무</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    
                 </tr>
                 <tr>
-                    <th>정약용</th>
-                    <th>주니어</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>휴무</th>
-                    <th>휴무</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
-                    <th>마감</th>
-                    <th>휴무</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>휴무</th>
-                    <th>휴무</th>
-                    <th>마감</th>
-                    <th>오픈</th>
-                    <th>오픈</th>
+                    <tr> 
+                        <th>홍길동</th>
+                        <th>휴무</th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>휴무</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>휴무</th>
+                        <th>휴무</th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                        <th>마감</th>
+                        <th>휴무</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>휴무</th>
+                        <th>휴무</th>
+                        <th>마감</th>
+                        <th>오픈</th>
+                        <th>오픈</th>
+                    </tr>
+                    <tr>
+                        <th>연장근무</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
                 </tr>
             </tbody>
         </table>
     </div>
+</div>
+<div>
+    <h2>특이사항 / 비고</h2>
+    <div class="other-msg">
+        <textarea type="text"></textarea>
+    </div>
+</div>
+<div>
+    <button>확정</button>
+
 </div>
 
 
