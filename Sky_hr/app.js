@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var url = require('url');
 var querystring = require('querystring');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose')
 
 
 var sRouter = require('./routes/sRouter');
@@ -21,8 +23,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/')));
 
-//add Router - 위에 라우터 require 하고 난뒤 사용.
 
+//bodyParser 설정 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+// var router = require('./routes')(app)
+
+// //run server
+// var server = app.listen(port, function(){
+//   console.log("Express server has started on port " + port);
+// });
+
+//add Router - 위에 라우터 require 하고 난뒤 사용.
 app.use('/', sRouter);
 app.use('/vw', vwRouter);
 

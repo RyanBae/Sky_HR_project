@@ -1,0 +1,1 @@
+node bin/www -c config-dev.json
