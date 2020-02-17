@@ -1,23 +1,33 @@
 var express = require('express');
 var router = express.Router();
 var userService = require('../services/userService')
-
+var schedulService = require('../services/scheduleService')
+var userModel = require('../models/user')
+var scheduleModel = require('../models/schedule')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('base/index');
 });
 
-router.get('/schedule', function(req, res, next){
-  //console.log(req);
-  userService.selectAll(function (err, result) {
+router.get('/schedule', async function(req, res, next){
+  try {
+    var findItems =  await scheduleModel.find({name:"ryan"});
+    console.log(findItems)
+  } catch (error) {
+    console.log(error)
+  }
+
+  // console.log(req);
+  schedulService.selectAll(function (err, result) {
     if(err) {
       let returnJson = JSON.stringify({
         "result" : false,
         "error": err
       })
-      res.end(returnJson)
+      res.json(returnJson)
     } else {
+      //res.json(result)
       res.end(JSON.stringify(result))
       console.log("result :: "+result)
     }

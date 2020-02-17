@@ -7,5 +7,5 @@ module.exports = function(host){
     console.log("host :: "+host);
     mongoose.Promise = global.Promise;
     mongoose.connect(host,{useUnifiedTopology: true, useNewUrlParser: true });
-    
+
 };

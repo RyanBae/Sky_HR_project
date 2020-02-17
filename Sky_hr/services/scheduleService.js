@@ -1,9 +1,9 @@
-const User = require('../models/user');
-console.log(User)
+const schedule = require('../models/schedule');
+console.log(schedule)
 
 module.exports = {
     selectAll: function (callback) {
-        User.find({}, function (err, results) {
+        schedule.find({}, function (err, results) {
             console.log(results);
             callback(err, results);
         })
