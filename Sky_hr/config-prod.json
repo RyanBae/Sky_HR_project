@@ -1,5 +1,0 @@
-{
-  "khost":"localhost:3000",
-  "type":"prod",
-  "mongo": "mongodb://localhost:27017/skyhr"
-}

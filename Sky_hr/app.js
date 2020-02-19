@@ -3,10 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var url = require('url');
-var querystring = require('querystring');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose')
 
 
 var sRouter = require('./routes/sRouter');
@@ -28,7 +25,6 @@ app.use(express.static(path.join(__dirname, '/')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-// var router = require('./routes')(app)
 
 // //run server
 // var server = app.listen(port, function(){

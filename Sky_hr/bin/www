@@ -8,7 +8,6 @@ var app = require('../app');
 var debug = require('debug')('sky-hr:server');
 var http = require('http');
 var nopt = require('nopt');
-var mongo = require("../mongo");
 
 var longOpts = {
   "config": String
@@ -17,14 +16,6 @@ var longOpts = {
 var shortOpts = {
   "c": ["--config"]
 };
-var parsed = nopt(longOpts,shortOpts,process.argv,2);
-console.log(parsed)
-var config = require('../'+parsed.config);
-app.locals.khost = config.khost;
-app.locals.type = config.type;
-console.log('1===='+config)
-console.log('2===='+mongo)
-mongo(config.mongo);
 /**
  * Get port from environment and store in Express.
  */

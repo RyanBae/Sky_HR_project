@@ -1,1 +1,0 @@
-node bin/www -c config-prod.json

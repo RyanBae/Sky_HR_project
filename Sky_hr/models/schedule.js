@@ -1,10 +1,10 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var schedule = new Schema({
-    id: String,
-    name: String,
+const scheduleSchema = new Schema({
+    id: {type: String, required: true},
+    name: {type: String, required: true}
 
 });
 
@@ -13,4 +13,9 @@ var schedule = new Schema({
 //     this.name = obj.name;
 // }
 
-module.exports = mongoose.model('schedule', schedule);
+module.exports = (connectionPool) => {
+    let model = connectionPool.model('schedule', scheduleSchema);
+    return model;
+};
+
+ //module.exports = mongoose.model('schedule', scheduleSchema);
