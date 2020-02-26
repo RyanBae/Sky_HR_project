@@ -3,7 +3,7 @@
 let { Router } = require('express')
 let router = Router();
 
-const model = require('../models/index');
+const scheduleModel = require('../models/schedule');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('base/index');
@@ -26,12 +26,33 @@ router.get('/schedule', async function(req, res, next){
     //console.log(model['schedule'])
     try{
 
+      let sch = await scheduleModel;
+      console.log(scheduleModel)
+      sch.find(function(err, result){
+        console.log(result)
+      })
+        //console.log(model['mongoose'])
         // const data = await userModel.find({});
         //   console.log(scheduleModel)
-        let scheduleModel = await model['schedule'];
+
+
+        // let scheduleModel = await model['schedules'];
+        // console.log(scheduleModel)
+        // scheduleModel.find(function(err, schedules){
+        //   if(err){
+        //     console.log(err);
+        //   }else{
+        //     console.log(schedules)
+        //   }
+        // })
+
+
+
+
        // let userModel = new model['user'];
-        let data = scheduleModel.find({"name":"ryan"});
-        console.log(data)
+        //let data = scheduleModel.
+        //console.log(data['name'])
+
         //scheduleModel.id = '1';
         //scheduleModel.name = 'Ryan';
         //scheduleModel.save();

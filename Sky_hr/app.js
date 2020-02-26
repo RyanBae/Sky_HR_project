@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 var sRouter = require('./routes/sRouter');
 var vwRouter = require('./routes/vw');
+var indexRouter = require('./routes/index');
 
 var app = express();
 // view engine setup
@@ -32,8 +33,9 @@ app.use(bodyParser.json());
 // });
 
 //add Router - 위에 라우터 require 하고 난뒤 사용.
-app.use('/', sRouter);
+app.use('/sky', sRouter);
 app.use('/vw', vwRouter);
+app.use('/index',indexRouter)
 
 
 // catch 404 and forward to error handler

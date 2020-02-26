@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
+const db = require('./index');
 
-const Schema = mongoose.Schema;
+//console.log(db)
 
-const scheduleSchema = new Schema({
+
+//const Schema = ;
+
+const scheduleSchema = mongoose.Schema({
     id: {type: String, required: true},
     name: {type: String, required: true}
 
@@ -13,9 +17,14 @@ const scheduleSchema = new Schema({
 //     this.name = obj.name;
 // }
 
-module.exports = (connectionPool) => {
-    let model = connectionPool.model('schedule', scheduleSchema);
-    return model;
-};
+// module.exports = (db) => {
+//     let model = mongoose.model('schedules', scheduleSchema)
+//     //let model = db.model('schedules', scheduleSchema);
+//     console.log()
+//     model.find(function(err, result){
+//         console.log(result)
+//     })
+//     return model;
+// };
 
- //module.exports = mongoose.model('schedule', scheduleSchema);
+ module.exports = mongoose.model('schedules', scheduleSchema);

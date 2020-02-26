@@ -21,7 +21,7 @@ const userSchema = new mSchema({
 // };
 
 
-module.exports = (connectionPool) => {
-    let model = connectionPool.model('user', userSchema);
+module.exports = (db) => {
+    let model = mongoose.model('users', userSchema);
     return model;
 };
